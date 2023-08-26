@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10GB
+      file-size-threshold: 100KB
+      max-request-size: 10GB
+ō
+#MULTIPLE_FILE_UPLOAD_URL
+multipleFileUploadIpfsUrl: http://localhost:5001/api/v0/add?wrap-with-directory=true&recursive=true
+
+# SINGLE_FILE_UPLOAD_URL
+singleFileUploadIpfsUrl: http://localhost:5001/api/v0/add
+
+# Serving ipfs file url
+getIpfsFile: http://localhost:8080/ipfs/
+
+
+# get file from ipfs dict :=> http://localhost:8080/ipfs/<dict hash>/<file name> = > ex = > http://localhost:8080/ipfs/QmY6qZqWbpdUfx1PJ7MMU1W4JQn4aro53HyFgmPoWrZygC/<filename>
+# get file from ipfs file :=> http://localhost:8080/ipfs/<file hash> = > ex = > http://localhost:8080/ipfs/QmSU2ZS3q6rRmxyxoqncp9gNPSpApV5eK9V1Yopi4a9CMH
